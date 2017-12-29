@@ -9,7 +9,7 @@ import Main from './components/Main';
 render(
   <Provider store={ store }>
     <Router>
-      <main />
+      <Main />
     </Router>
   </Provider>,
   document.getElementById('root')

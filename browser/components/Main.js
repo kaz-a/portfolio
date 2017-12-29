@@ -9,7 +9,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import store from '../store';
 import { fetchWork } from '../store/work';
 
-// import Navbar from './Navbar';
+import Navbar from './Navbar';
+
 
 class Main extends Component {
   constructor(props){
@@ -25,7 +26,7 @@ class Main extends Component {
       <MuiThemeProvider>
         <div className="container">
           <link href="/public/css/style.css" rel="stylesheet" />
-          <h1>Hi!!!!</h1>
+          <Navbar />
         </div>
 
       </MuiThemeProvider>
