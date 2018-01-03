@@ -11,7 +11,9 @@ import store from '../store';
 import { fetchProjects } from '../store/projects';
 
 import Navbar from './Navbar';
-
+import Home from './Home';
+import Project from './Project';
+import About from './About';
 
 class Main extends Component {
   constructor(props){
@@ -23,17 +25,15 @@ class Main extends Component {
   }
 
   render(){
-
     const muiTheme = getMuiTheme({
       palette: {
         textColor: blueGrey900,
       },
-
       appBar: {
         background: '#fff',
         textColor: blueGrey900        
       }
-    });
+    })
 
 
     return(
@@ -41,6 +41,11 @@ class Main extends Component {
         <div className="container">
           <link href="/public/css/style.css" rel="stylesheet" />
           <Navbar />
+          <Switch>
+            <Route exact path='/' component={ Home } />
+            <Route exact path='/projects' component={ Project } />
+            <Route exact path='/about' component={ About } />            
+          </Switch>
         </div>
 
       </MuiThemeProvider>
