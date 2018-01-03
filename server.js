@@ -3,7 +3,7 @@ const express = require('express'),
   chalk = require('chalk'),
   morgan = require('morgan'),
   path = require('path'),
-  // db = require('./db'),
+  db = require('./db'),
   port = process.env.PORT || 3000;
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));

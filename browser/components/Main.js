@@ -5,9 +5,10 @@ import { connect } from 'react-redux';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { blueGrey900 } from 'material-ui/styles/colors';
 
 import store from '../store';
-import { fetchWork } from '../store/work';
+import { fetchProjects } from '../store/projects';
 
 import Navbar from './Navbar';
 
@@ -22,8 +23,21 @@ class Main extends Component {
   }
 
   render(){
+
+    const muiTheme = getMuiTheme({
+      palette: {
+        textColor: blueGrey900,
+      },
+
+      appBar: {
+        background: '#fff',
+        textColor: blueGrey900        
+      }
+    });
+
+
     return(
-      <MuiThemeProvider>
+      <MuiThemeProvider muiTheme={ muiTheme }>
         <div className="container">
           <link href="/public/css/style.css" rel="stylesheet" />
           <Navbar />
@@ -37,16 +51,16 @@ class Main extends Component {
 }
 
 
-const mapStateToProps = ({ work }) => {
+const mapStateToProps = ({ projects }) => {
   return {
-    work
+    projects
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     fetchInitialData: () => {
-      dispatch(fetchWork())
+      dispatch(fetchProjects())
     }
   }
 }

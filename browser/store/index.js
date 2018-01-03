@@ -3,10 +3,10 @@ import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import work from './work';
+import projects from './projects';
 
 const reducer = combineReducers({
-  work
+  projects
 })
 
 const middleWare = applyMiddleware(thunkMiddleware, createLogger())
