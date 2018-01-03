@@ -30,7 +30,7 @@ class Main extends Component {
         textColor: blueGrey900,
       },
       appBar: {
-        background: '#fff',
+        background: 'transparent',
         textColor: blueGrey900        
       }
     })
