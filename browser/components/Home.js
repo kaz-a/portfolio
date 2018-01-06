@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 
 import store from '../store';
 
+import Project from './Project'
+
 const Home = props => {
   return (
-    <h1>Home!!!!</h1>
+    <Project />
   )
 }
 

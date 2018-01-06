@@ -21,8 +21,8 @@ const Navbar = () => {
       style={{ backgroundColor: '#fff', boxShadow: 'none' }}
       title='Kazue Anan'
       iconElementLeft = {
-        <IconButton iconClassName="material-icons"
-        containerElement={<Link to="/" />}
+        <IconButton iconClassName="material-icons" 
+        containerElement={<Link to="/" />} style={{ marginTop: '-8px' }}
         ><i className="fa fa-grav" aria-hidden="true"></i>
         </IconButton>
       }
