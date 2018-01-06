@@ -37,25 +37,23 @@ class Projects extends Component {
     const { projects } = this.props;
 
     return (
-      <div style={ styles.root }>
-        <GridList
-          cellHeight={ 180 }
-          style={ styles.gridList }
-        >
-          <Subheader>My projects</Subheader>
-          {
-            projects.map(project => (
-            <GridTile
-              key={ project.name }
-              title={ project.name }
-              subtitle={ <span>{ project.description }</span> }
-              actionIcon={ <IconButton><StarBorder color="white" /></IconButton> }
-            >
-              <img src={ project.imageUrl } />
-            </GridTile>
-          ))
-          }
-        </GridList>
+      <div className="row content">
+        {
+          projects.map(project => {
+            return (            
+            <div className="card col-xs-12 col-sm-6 col-md-4 mb-4" style={{ border: '0px solid black' }} key={ project.name } >
+              <img className="card-img-top" style={{ width: '100%', height: 'auto', borderTopRightRadius: 0, borderTopLeftRadius: 0 }} src={ project.imageUrl } alt="Card image cap"/>
+              <div className="card-block">
+                <h5 className="card-title">{ project.name }</h5>
+                <p className="card-text text-muted">{ project.description }</p>
+                
+              </div>
+            </div>
+            
+            )
+          })
+        }
+
       </div>
     )
   }
@@ -67,14 +65,6 @@ const mapStateToProps = ({ projects }) => {
     projects
   }
 }
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     fetchProjects: () => {
-//       dispatch(fetchProjects())
-//     }
-//   }
-// }
 
 export default connect(mapStateToProps, null)(Projects)
 

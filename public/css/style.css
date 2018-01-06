@@ -7,3 +7,6 @@ body {
 
 .container {
   min-height: calc(100vh - 70px); }
+
+.content {
+  margin-top: 80px; }
