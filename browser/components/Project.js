@@ -41,7 +41,7 @@ class Projects extends Component {
         {
           projects.map(project => {
             return (            
-            <div className="card col-xs-12 col-sm-6 col-md-4 mb-4" style={{ border: '0px solid black' }} key={ project.name } >
+            <div className="card col-xs-12 col-sm-6 col-md-4" style={{ border: '0px solid black' }} key={ project.name } >
               <img className="card-img-top" style={{ width: '100%', height: 'auto', borderTopRightRadius: 0, borderTopLeftRadius: 0 }} src={ project.imageUrl } alt="Card image cap"/>
               <div className="card-block">
                 <h5 className="card-title">{ project.name }</h5>
