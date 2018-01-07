@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactoDOM from 'react-dom';
-import { Router, Switch, Redirect, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { GridList, GridTile } from 'material-ui/GridList';
@@ -44,7 +44,7 @@ class Projects extends Component {
             <div className="card col-xs-12 col-sm-6 col-md-4" style={{ border: '0px solid black' }} key={ project.name } >
               <img className="card-img-top" style={{ width: '100%', height: 'auto', borderTopRightRadius: 0, borderTopLeftRadius: 0 }} src={ project.imageUrl } alt="Card image cap"/>
               <div className="card-block">
-                <h5 className="card-title">{ project.name }</h5>
+                <Link to={`/projects/${project.id}`}><h5 className="card-title">{ project.name }</h5></Link>
                 <p className="card-text text-muted">{ project.description }</p>
                 
               </div>
