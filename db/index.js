@@ -3,6 +3,7 @@ const db = require('./conn'),
   Detail = require('./Detail');
 
 Detail.belongsTo(Project);
+Project.hasOne(Detail);
 
 
 db.sync({ force: true })

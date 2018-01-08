@@ -13,6 +13,7 @@ import { fetchProjects } from '../store/projects';
 import Navbar from './Navbar';
 import Home from './Home';
 import Project from './Project';
+import Detail from './Detail';
 import About from './About';
 
 class Main extends Component {
@@ -44,6 +45,7 @@ class Main extends Component {
           <Switch>
             <Route exact path='/' component={ Home } />
             <Route exact path='/projects' component={ Project } />
+            <Route path='/projects/:id' component={ Detail } />
             <Route exact path='/about' component={ About } />            
           </Switch>
         </div>
