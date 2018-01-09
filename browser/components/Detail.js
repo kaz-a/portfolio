@@ -39,7 +39,7 @@ class Detail extends Component {
           project.map(proj => {
             return (
               <div key={ proj.id } className="row">
-                <div className="col-xs-12 col-md-6">
+                <div className="col-xs-12 col-md-4">
                   <h1>{ proj.name }</h1>
                   <h4>{ proj.description }</h4>
                   <p>{ proj.detail.desc }</p>
@@ -56,10 +56,17 @@ class Detail extends Component {
                     label="App Link"
                     default={ true }
                     icon={<i className="fa fa-android" />}
+                  /><br/>
+                  <FlatButton
+                    href='/projects'
+                    label="Back to Projects"
+                    primary={ true }
+                    icon={<i className="fa fa-arrow-left" />}
                   />
                 </div >
 
-                <div className="col-xs-12 col-md-6">                  
+
+                <div className="col-xs-12 col-md-8">                  
                 {
                   imageList.map(img => {
                     return (
