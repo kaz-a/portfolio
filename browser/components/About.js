@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 
+import FlatButton from 'material-ui/FlatButton';
+import FontIcon from 'material-ui/FontIcon';
+
 import store from '../store';
 
 const About = props => {
@@ -12,14 +15,34 @@ const About = props => {
       </div>
       <div className="col-xs-12 col-md-6">
         <h1>HELLO, I'M KAZ.</h1><br/>
-        <p>Kaz (aka. Kazue /ka:-zə-ɛ/) is a Brooklyn-based research scientist / freelance designer-coder.<br/><br/>
+        <p>Kaz (aka. Kazue /ka:-zə-ɛ/) is a Brooklyn-based software engineer.<br/><br/>
 
-        Her objective is to portray complex data in the compelling visual format. 
-        Her current obsession is d3.js and python: coding + design + data is something she is madly enthusiastic about.</p> 
+        She specializes in Javascript and data visualization. Her objective is to portray complex data in the compelling visual format. 
+        Her current obsession is d3.js, react and python: coding + design + data is something she is madly enthusiastic about, 
+        along with cooking and eating.</p> 
         <br/>
         
-        <a target="_blank" title="linkedin" href="https://www.linkedin.com/in/kazanan/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>&nbsp;&nbsp;
-        <a target="_blank" title="github" href="https://github.com/kaz-a"><i className="fa fa-github" aria-hidden="true"></i></a>
+        <FlatButton
+          href="https://www.linkedin.com/in/kazanan/"
+          target="_blank"
+          default={ true }
+          icon={<i className="fa fa-linkedin" />}
+          style={{ margin: '12' }}
+        />
+        <FlatButton
+          href="https://github.com/kaz-a"
+          target="_blank"
+          default={ true }
+          icon={<i className="fa fa-github" />}
+          style={{ margin: '12' }}
+        />
+        <FlatButton
+          href="https://medium.com/@zakscloset"
+          target="_blank"
+          default={ true }
+          icon={<i className="fa fa-medium" />}
+          style={{ margin: '12' }}
+        />
 
       </div>
     </div>

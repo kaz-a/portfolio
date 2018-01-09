@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import FlatButton from 'material-ui/FlatButton';
+import FontIcon from 'material-ui/FontIcon';
+
 import store from '../store';
 import { fetchProject } from '../store/projects'
 
@@ -17,28 +20,53 @@ class Detail extends Component {
     const project = projects.filter(proj => {
       return proj.id === +id
     })
-    console.log(project[0])
+
+    let imageList = []
+    if(project.length >= 1){
+      const proj = project[0]
+      const captions = proj.detail.captions, images = proj.detail.images      
+      for(let i=0; i<captions.length; i++){
+          let returnObj = {}
+          returnObj['image'] = images[i]
+          returnObj['caption'] = captions[i]
+          imageList.push(returnObj)
+      }      
+    }
 
     return (
       <div className="row content">        
         {
           project.map(proj => {
             return (
-              <div key={ proj.id }>
+              <div key={ proj.id } className="row">
                 <div className="col-xs-12 col-md-6">
-                  <h1>{ proj.detail.title }</h1>
-                  <h4>{ proj.detail.description }</h4>
-                  <a href={ proj.detail.githubUrl }>github</a>
-                  <a href={ proj.detail.publicUrl }>app</a>
+                  <h1>{ proj.name }</h1>
+                  <h4>{ proj.description }</h4>
+                  <p>{ proj.detail.desc }</p>
+                  <FlatButton
+                    href={ proj.detail.githubUrl }
+                    target="_blank"
+                    label="GitHub Link"
+                    default={ true }
+                    icon={<i className="fa fa-github" />}
+                  />
+                  <FlatButton
+                    href={ proj.detail.publicUrl }
+                    target="_blank"
+                    label="App Link"
+                    default={ true }
+                    icon={<i className="fa fa-android" />}
+                  />
                 </div >
 
                 <div className="col-xs-12 col-md-6">                  
                 {
-                  proj.detail.images.map(img => {
+                  imageList.map(img => {
                     return (
-                      <div className="card" style={{ border: '0px solid black' }} key={ img }>
-                        <img className="card-img-top" style={{ width: '100%', height: 'auto', borderTopRightRadius: 0, borderTopLeftRadius: 0 }} src={ img } />
-                        <p className="card-text">{ proj.detail.description }</p><br/>
+                      <div className="card" style={{ border: '0px solid black' }} key={ img.image }>
+                        <img className="card-img-top" style={{ width: '100%', height: 'auto', borderTopRightRadius: 0, borderTopLeftRadius: 0 }} src={ img.image } />
+                        <p className="card-text">{ img.caption }</p>
+                        <br/><br/><br/><br/>
                       </div>
                     )
                   })
@@ -47,9 +75,7 @@ class Detail extends Component {
               </div>
             )
           })
-          
         }
-
       </div>
 
     )
@@ -64,3 +90,4 @@ const mapStateToProps = ({ projects }) => {
 
 
 export default connect(mapStateToProps, null)(Detail)
+

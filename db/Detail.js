@@ -2,16 +2,15 @@ const Sequelize = require('sequelize'),
   db = require('./conn');
 
 const Detail = db.define('detail', {
-  title: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  description: {
+  desc: {
     type: Sequelize.TEXT,
     allowNull: false
-  }, 
+  },
   images: {
     type: Sequelize.ARRAY(Sequelize.STRING)
+  },
+  captions: {
+    type: Sequelize.ARRAY(Sequelize.TEXT)
   },
   githubUrl: {
     type: Sequelize.STRING
