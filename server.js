@@ -24,3 +24,5 @@ app.use('/', (err, req, res, next) => {
 app.listen(port, () => {
   console.log(chalk.cyan(`server listening on port ${port}...`))
 })
+
+module.exports = app;
