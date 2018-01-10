@@ -34,12 +34,12 @@ const daycareCaptions = ['Leaflet map with marker cluster', 'Zoomed in to show d
 db.sync({ force: true })
 .then(() => {
   return Promise.all([
-    Project.create({ name: 'Speeek', description: 'Speech Pattern Analysis App', imageUrl: '/images/collage.jpg' }),
-    Project.create({ name: 'dita', description: 'Idea Journaling/Sharing App', imageUrl: '/images/print.jpg' }), 
-    Project.create({ name: 'Wayne Warehouse', description: 'Fictitious E-Commerce Site', imageUrl: '/images/book.jpg' }),
-    Project.create({ name: 'NYCCAS', description: 'NYC Real-time Air Quality App', imageUrl: '/images/report.jpg' }),    
-    Project.create({ name: 'PM2.5 Infographic', description: 'NYC PM2.5 Interactive Data Story', imageUrl: '/images/infographic.jpg' }),
-    Project.create({ name: 'Daycare Finder', description: 'NYC Daycare Map', imageUrl: '/images/map.jpg' }),
+    Project.create({ name: 'Speeek', description: 'Speech Pattern Analysis App', imageUrl: '/images/speeek.png' }),
+    Project.create({ name: 'dita', description: 'Idea Journaling/Sharing App', imageUrl: '/images/dita.png' }), 
+    Project.create({ name: 'Wayne Warehouse', description: 'Fictitious E-Commerce Site', imageUrl: '/images/wayne.png' }),
+    Project.create({ name: 'NYCCAS', description: 'NYC Real-time Air Quality App', imageUrl: '/images/nyccas.png' }),    
+    Project.create({ name: 'PM2.5 Infographic', description: 'NYC PM2.5 Interactive Data Story', imageUrl: '/images/pm.png' }),
+    Project.create({ name: 'Daycare Finder', description: 'NYC Daycare Map', imageUrl: '/images/daycare.png' }),
 
     Detail.create({ desc: speeekDesc, images: ['/images/speeek1.png', '/images/speeek2.png', '/images/speeek3.png'], captions: speeekCaptions, githubUrl: 'https://github.com/kaz-a/stackathon', publicUrl: 'https://speeek.herokuapp.com/' }), 
     Detail.create({ desc: ditaDesc, images: ['/images/dita1.png', '/images/dita2.png', '/images/dita3.png', '/images/dita4.png', '/images/dita5.png', '/images/dita6.png', '/images/dita7.png'], captions: ditaCaptions, githubUrl: 'https://github.com/rivermanvr/dita', publicUrl: 'https://dita-capstone.herokuapp.com' }),

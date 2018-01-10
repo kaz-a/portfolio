@@ -46,20 +46,20 @@ class Detail extends Component {
                     href={ proj.detail.githubUrl }
                     target="_blank"
                     label="GitHub Link"
-                    default={ true }
+                    primary={ true }
                     icon={<i className="fa fa-github" />}
                   />
                   <FlatButton
                     href={ proj.detail.publicUrl }
                     target="_blank"
                     label="App Link"
-                    default={ true }
+                    primary={ true }
                     icon={<i className="fa fa-android" />}
                   /><br/>
                   <FlatButton
                     href='/projects'
                     label="Back to Projects"
-                    primary={ true }
+                    secondary={ true }
                     icon={<i className="fa fa-arrow-left" />}
                   />
                 </div >
