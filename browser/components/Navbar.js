@@ -16,6 +16,9 @@ const Navbar = () => {
     { label: 'About', path: '/about' }
   ]
 
+  const emoji = require('emoji-dictionary');
+  const pizza = emoji.getUnicode("pizza")
+
   return (
     <AppBar 
       style={{ backgroundColor: '#fff', boxShadow: 'none' }}
@@ -23,7 +26,7 @@ const Navbar = () => {
       iconElementLeft = {
         <IconButton iconClassName="material-icons" 
         containerElement={<Link to="/" />} style={{ marginTop: '-8px' }}
-        ><i className="fa fa-grav" aria-hidden="true"></i>
+        ><i className="fa fa-lemon-o" aria-hidden="true"></i>
         </IconButton>
       }
       iconElementRight ={
