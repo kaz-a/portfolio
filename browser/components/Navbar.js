@@ -16,9 +16,6 @@ const Navbar = () => {
     { label: 'About', path: '/about' }
   ]
 
-  const emoji = require('emoji-dictionary');
-  const pizza = emoji.getUnicode("pizza")
-
   return (
     <AppBar 
       style={{ backgroundColor: '#fff', boxShadow: 'none' }}
