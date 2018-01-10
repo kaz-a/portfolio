@@ -24,7 +24,7 @@ class Projects extends Component {
               <div className="card-block">
                 <Link to={`/projects/${project.id}`}><h5 className="card-title">{ project.name }</h5></Link>
                 <p className="card-text text-muted">{ project.description }</p>
-                
+                <br/>
               </div>
             </div>
             
