@@ -41,7 +41,6 @@ class Detail extends Component {
               <div key={ proj.id } className="row">
                 <div className="col-xs-12 col-md-4">
                   <h1>{ proj.name }</h1>
-                  <h4>{ proj.description }</h4>
                   <p>{ proj.detail.desc }</p>
                   <FlatButton
                     href={ proj.detail.githubUrl }

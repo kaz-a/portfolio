@@ -11,7 +11,7 @@ const About = props => {
   return (
     <div className="row content">
       <div className="col-xs-12 col-md-6">
-        <img src="http://via.placeholder.com/250x250"/>
+        <img src="/images/about.jpg" style={{ width: '100%' }} />
       </div>
       <div className="col-xs-12 col-md-6">
         <h1>HELLO, I'M KAZ.</h1><br/>
@@ -19,7 +19,7 @@ const About = props => {
 
         She specializes in Javascript and data visualization. Her objective is to portray complex data in the compelling visual format. 
         Her current obsession is d3.js, react and python: coding + design + data is something she is madly enthusiastic about, 
-        along with cooking and eating.</p> 
+        along with cooking and eating!</p> 
         <br/>
         
         <FlatButton
