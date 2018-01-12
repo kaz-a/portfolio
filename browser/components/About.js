@@ -43,6 +43,7 @@ const About = props => {
           icon={<i className="fa fa-medium" />}
           style={{ margin: '12' }}
         />
+        
 
       </div>
     </div>

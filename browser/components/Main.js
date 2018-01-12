@@ -15,6 +15,7 @@ import Home from './Home';
 import Project from './Project';
 import Detail from './Detail';
 import About from './About';
+import Contact from './Contact';
 
 class Main extends Component {
   constructor(props){
@@ -46,7 +47,8 @@ class Main extends Component {
             <Route exact path='/' component={ Home } />
             <Route exact path='/projects' component={ Project } />
             <Route path='/projects/:id' component={ Detail } />
-            <Route exact path='/about' component={ About } />            
+            <Route exact path='/about' component={ About } />  
+            <Route exact path='/contact' component={ Contact } />         
           </Switch>
         </div>
 

@@ -13,7 +13,8 @@ import IconMenu from 'material-ui/IconMenu';
 const Navbar = () => {
   const navItems = [
     { label: 'Projects', path: '/projects' },
-    { label: 'About', path: '/about' }
+    { label: 'About', path: '/about' },
+    { label: 'Contact', path: '/contact' }
   ]
 
   return (
