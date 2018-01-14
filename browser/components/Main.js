@@ -37,7 +37,8 @@ class Main extends Component {
       }
     })
 
-
+    // put this line back if i decide to have a contact form later:
+    // <Route exact path='/contact' component={ Contact } />  
     return(
       <MuiThemeProvider muiTheme={ muiTheme }>
         <div className="container">
@@ -48,7 +49,7 @@ class Main extends Component {
             <Route exact path='/projects' component={ Project } />
             <Route path='/projects/:id' component={ Detail } />
             <Route exact path='/about' component={ About } />  
-            <Route exact path='/contact' component={ Contact } />         
+                   
           </Switch>
         </div>
 
